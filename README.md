@@ -13,3 +13,11 @@ cmake ../cmake-fetchcontent-tutorial-code
 cmake --build .
 ./src/example_exe # or ./src/Debug/example_exe if using Visual Studio
 ```
+
+Additional code was added to create a 'populate.sh' script in the project
+root which can reproduce the repo's directory tree somewhere else. The
+'populate.sh' script is re-created whenever the project is built, it can
+be subsequently copied to the desired target location and executed there,
+recreating the tree without the need to use git. This is meant as an additional
+way of 'bootstrapping' a new repo with all the code 'on board' to successfully
+build the example code.
